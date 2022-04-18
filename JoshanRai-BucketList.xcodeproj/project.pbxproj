@@ -11,6 +11,12 @@
 		3F52A7C52807865B00C7A4AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52A7C42807865B00C7A4AE /* ContentView.swift */; };
 		3F52A7C72807865C00C7A4AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F52A7C62807865C00C7A4AE /* Assets.xcassets */; };
 		3F52A7CA2807865C00C7A4AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F52A7C92807865C00C7A4AE /* Preview Assets.xcassets */; };
+		3F52A7F3280CD00D00C7A4AE /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52A7F2280CD00D00C7A4AE /* ContentView-ViewModel.swift */; };
+		3F52A7F6280CD01B00C7A4AE /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52A7F5280CD01B00C7A4AE /* EditView-ViewModel.swift */; };
+		3F52A7F8280CD02200C7A4AE /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52A7F7280CD02200C7A4AE /* EditView.swift */; };
+		3F52A7FB280CD08C00C7A4AE /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52A7FA280CD08C00C7A4AE /* FileManager-DocumentsDirectory.swift */; };
+		3F52A7FD280CD09400C7A4AE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52A7FC280CD09400C7A4AE /* Result.swift */; };
+		3F52A7FF280CD09D00C7A4AE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52A7FE280CD09D00C7A4AE /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		3F52A7C42807865B00C7A4AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3F52A7C62807865C00C7A4AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F52A7C92807865C00C7A4AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3F52A7F2280CD00D00C7A4AE /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		3F52A7F5280CD01B00C7A4AE /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
+		3F52A7F7280CD02200C7A4AE /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		3F52A7FA280CD08C00C7A4AE /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+		3F52A7FC280CD09400C7A4AE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3F52A7FE280CD09D00C7A4AE /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				3F52A7C22807865B00C7A4AE /* JoshanRai_BucketListApp.swift */,
-				3F52A7C42807865B00C7A4AE /* ContentView.swift */,
+				3F52A7F4280CD01100C7A4AE /* Model */,
+				3F52A7F1280CCFF700C7A4AE /* View */,
+				3F52A7F9280CD03D00C7A4AE /* ViewModel */,
 				3F52A7C62807865C00C7A4AE /* Assets.xcassets */,
 				3F52A7C82807865C00C7A4AE /* Preview Content */,
 			);
@@ -65,6 +79,34 @@
 				3F52A7C92807865C00C7A4AE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3F52A7F1280CCFF700C7A4AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F52A7C42807865B00C7A4AE /* ContentView.swift */,
+				3F52A7F7280CD02200C7A4AE /* EditView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F52A7F4280CD01100C7A4AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F52A7FA280CD08C00C7A4AE /* FileManager-DocumentsDirectory.swift */,
+				3F52A7FC280CD09400C7A4AE /* Result.swift */,
+				3F52A7FE280CD09D00C7A4AE /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F52A7F9280CD03D00C7A4AE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F52A7F2280CD00D00C7A4AE /* ContentView-ViewModel.swift */,
+				3F52A7F5280CD01B00C7A4AE /* EditView-ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F52A7FB280CD08C00C7A4AE /* FileManager-DocumentsDirectory.swift in Sources */,
 				3F52A7C52807865B00C7A4AE /* ContentView.swift in Sources */,
+				3F52A7FF280CD09D00C7A4AE /* Location.swift in Sources */,
+				3F52A7F8280CD02200C7A4AE /* EditView.swift in Sources */,
+				3F52A7F6280CD01B00C7A4AE /* EditView-ViewModel.swift in Sources */,
+				3F52A7FD280CD09400C7A4AE /* Result.swift in Sources */,
+				3F52A7F3280CD00D00C7A4AE /* ContentView-ViewModel.swift in Sources */,
 				3F52A7C32807865B00C7A4AE /* JoshanRai_BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +318,7 @@
 				DEVELOPMENT_TEAM = Y8U2DWH94S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +348,7 @@
 				DEVELOPMENT_TEAM = Y8U2DWH94S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
