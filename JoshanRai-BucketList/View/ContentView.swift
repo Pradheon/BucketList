@@ -10,7 +10,7 @@ import MapKit
 
 struct ContentView: View {
     @StateObject private var viewModel = ViewModel()
-    
+
     var body: some View {
         if viewModel.isUnlocked {
             ZStack {
@@ -23,7 +23,7 @@ struct ContentView: View {
                                 .frame(width: 44, height: 44)
                                 .background(.white)
                                 .clipShape(Circle())
-                            
+
                             Text(location.name)
                                 .fixedSize()
                         }
@@ -33,18 +33,18 @@ struct ContentView: View {
                     }
                 }
                 .ignoresSafeArea()
-                
+
                 Circle()
                     .fill(.blue)
                     .opacity(0.3)
                     .frame(width: 32, height: 32)
-                
+
                 VStack {
                     Spacer()
-                    
+
                     HStack {
                         Spacer()
-                        
+
                         Button {
                             viewModel.addLocation()
                         } label: {
@@ -72,7 +72,7 @@ struct ContentView: View {
             .background(.blue)
             .foregroundColor(.white)
             .clipShape(Capsule())
-            .alert("Autentication Error", isPresented: $viewModel.isShowingAuthenticationError) {
+            .alert("Authentication error", isPresented: $viewModel.isShowingAuthenticationError) {
                 Button("OK") { }
             } message: {
                 Text(viewModel.authenticationError)
@@ -86,3 +86,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

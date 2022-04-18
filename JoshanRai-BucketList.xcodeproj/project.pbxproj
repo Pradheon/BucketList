@@ -65,8 +65,8 @@
 			children = (
 				3F52A7C22807865B00C7A4AE /* JoshanRai_BucketListApp.swift */,
 				3F52A7F4280CD01100C7A4AE /* Model */,
-				3F52A7F1280CCFF700C7A4AE /* View */,
 				3F52A7F9280CD03D00C7A4AE /* ViewModel */,
+				3F52A7F1280CCFF700C7A4AE /* View */,
 				3F52A7C62807865C00C7A4AE /* Assets.xcassets */,
 				3F52A7C82807865C00C7A4AE /* Preview Content */,
 			);
@@ -328,7 +328,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jrai.JoshanRai-BucketList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -358,7 +358,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jrai.JoshanRai-BucketList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

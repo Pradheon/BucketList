@@ -11,7 +11,7 @@ struct EditView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject private var viewModel: ViewModel
     var onSave: (Location) -> Void
-    
+
     var body: some View {
         NavigationView {
             Form {
@@ -19,13 +19,13 @@ struct EditView: View {
                     TextField("Place Name", text: $viewModel.name)
                     TextField("Description", text: $viewModel.description)
                 }
-                
-                Section("Nearby Places...") {
+
+                Section("Nearby...") {
                     switch viewModel.loadingState {
                     case .loading:
                         Text("Loading...")
                     case .loaded:
-                        ForEach(viewModel.pages, id: \.pageID) { page in
+                        ForEach(viewModel.pages, id: \.pageid) { page in
                             Text(page.title)
                                 .font(.headline)
                             + Text(": ")
@@ -37,7 +37,7 @@ struct EditView: View {
                     }
                 }
             }
-            .navigationTitle("Place Details")
+            .navigationTitle("Place details")
             .toolbar {
                 Button("Save") {
                     let newLocation = viewModel.createNewLocation()
@@ -50,7 +50,7 @@ struct EditView: View {
             }
         }
     }
-    
+
     init(location: Location, onSave: @escaping (Location) -> Void) {
         self.onSave = onSave
         _viewModel = StateObject(wrappedValue: ViewModel(location: location))

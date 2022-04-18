@@ -16,13 +16,13 @@ extension ContentView {
         @Published private(set) var locations: [Location]
         @Published var selectedPlace: Location?
         @Published var isUnlocked = false
-        
+
         //  Authentication-based variables/constants
         @Published var authenticationError = "Unknown Error"
         @Published var isShowingAuthenticationError = false
-        
+
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
-        
+
         //  Initializer for the data's save path on a user's device for locations
         init() {
             do {
@@ -33,7 +33,7 @@ extension ContentView {
                 print("Error: \(error.localizedDescription)")
             }
         }
-        
+
         //  Save data to the specified path, return an error if unable to save the data
         func save() {
             do {
@@ -43,14 +43,14 @@ extension ContentView {
                 print("Unable to save data. \nError: \(error.localizedDescription)")
             }
         }
-        
+
         //  Add a location to the array of Locations
         func addLocation() {
             let newLocation = Location(id: UUID(), name: "New Location", description: "", latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude)
             locations.append(newLocation)
             save()
         }
-        
+
         //  Update location and save the data
         func update(location: Location) {
             guard let selectedPlace = selectedPlace else { return }
@@ -60,27 +60,27 @@ extension ContentView {
                 save()
             }
         }
-        
+
         //  Authenticate for the user
         func authenticate() {
             let context = LAContext()
             var error: NSError?
-            
+
             if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-                let reason = "Plase authenticate yourself to unlock your places."
-                
+                let reason = "Please authenticate yourself to unlock your places."
+
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                     Task { @MainActor in
                         if success {
                             self.isUnlocked = true
                         } else {
-                            self.authenticationError = "There was a problem authentication you. Please try again."
+                            self.authenticationError = "There was a problem authenticating you. Please try again."
                             self.isShowingAuthenticationError = true
                         }
                     }
                 }
             } else {
-                authenticationError = "Sorry, your device doesn't support biometric authentication."
+                authenticationError = "Sorry, your device does not support biometric authentication."
                 isShowingAuthenticationError = true
             }
         }
